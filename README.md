@@ -21,7 +21,12 @@ This project follows **best practices in data modeling** to structure events and
 
 ### **1️⃣ Data Extraction (Fivetran 🛠️)**  
 - Pulls raw data from **Google Sheets** (simulating event data)  
-- Loads it into **Snowflake** for processing  
+- Loads it into **Snowflake** for processing
+- Stream Info & Transactions Table
+
+
+
+
 
 ### **2️⃣ Data Transformation (dbt 📊)**  
 - Converts raw event data into **structured, meaningful tables**  
