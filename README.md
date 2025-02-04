@@ -41,7 +41,9 @@ This project follows **best practices in data modeling** to structure events and
 
 ### **4️⃣ Product Analytics (Amplitude 📈)**  
 - **Final destination for event tracking**  
-- Enables deep insights into **user behavior, engagement, and retention**  
+- Enables deep insights into **user behavior, engagement, and retention**
+- ![Amplitude Setup](https://github.com/Mo3azAqeed/Twitche-Activity-Schema/blob/8381da47ee10ac10eec2854afaae0fd3dd866e30/Screenshot%20(36).png)  
+
 
 ---
 
