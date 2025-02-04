@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stream_ended
+    description: "Tracks the details of a stream when it ends, including viewer stats and streamer information."
+    columns:
+      - name: event_name
+        description: "The name of the event. In this case, it is 'stream_ended'."
+        tests:
+          - not_null
+      - name: streamer_id
+        description: "The ID of the streamer whose session has ended."
+        tests:
+          - not_null
+      - name: timestamp
+        description: "The timestamp when the stream ends."
+        tests:
+          - not_null
+      - name: properties
+        description: "A JSON object containing additional details about the stream, such as viewer counts, stream duration, and more."
+        tests:
+          - not_null

@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: src_user_streams
+    description: Source that holds all user stream data, including logs, transactions, and gift types.
+    database: DBT_DB
+    schema: DBT_SCHEMA 
+    tables:
+      - name: LOGS
+        description: Contains detailed logs for each live stream event.
+  
+      - name: TRANSACTIONS
+        description: Contains transaction data related to gifts, payments, and other financial activities.
+  
+      - name: GIFT_TYPE
+        description: Lists the types of gifts that users can send or receive during a live stream.

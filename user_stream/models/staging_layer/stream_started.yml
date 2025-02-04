@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stream_started
+    description: "Captures the start of a live stream session by a streamer."
+    columns:
+      - name: event_name
+        description: "The type of event, always 'stream_started'."
+        tests:
+          - not_null
+      
+      - name: streamer_id
+        description: "The unique identifier of the streamer who started the session."
+        tests:
+          - not_null
+
+      - name: timestamp
+        description: "The timestamp when the live stream started."
+        tests:
+          - not_null
+      
+      - name: properties
+        description: "A JSON object containing additional details about the stream."
+        tests:
+          - not_null

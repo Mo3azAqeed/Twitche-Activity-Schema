@@ -1,0 +1,6 @@
+*.csv
+*.ipynb
+*.log
+dbt-env/
+.vscode
+__pycache__/

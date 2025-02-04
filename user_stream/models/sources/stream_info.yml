@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: stream_info
+    description: This model contains detailed information about live streams, including stream metadata, viewer statistics, interaction data, and gift-related information.
+    columns:
+      - name: stream_id
+        description: This is a unique identifier for each stream.
+        quote: false
+        tests:
+          - unique
+          - not_null
+          
+      - name: start_time
+        data_type: Timestamp
+        description: The start time of the stream, converted from the original timestamp format.
+        tests:
+          - not_null
+
+      - name: end_time
+        data_type: Timestamp
+        description: The end time of the stream, converted from the original timestamp format.
+        tests:
+          - not_null
+
+      - name: stream_duration
+        data_type: Int
+        description: The duration of the stream in minutes, rounded up to the nearest whole minute.
+        tests:
+          - not_null
+
+      - name: stream_closed_by
+        data_type: String
+        description: The reason the stream was closed. If not available, defaults to 'Other'.
+        tests:
+          - not_null
+
+      - name: max_live_viewers
+        data_type: Int
+        description: The maximum number of viewers during the stream.
+
+      - name: max_live_viewer_time
+        data_type: Timestamp
+        description: The timestamp when the maximum number of viewers was reached during the stream.
+
+      - name: is_private_stream
+        data_type: Boolean
+        description: Indicates whether the stream was private or public.
+
+      - name: total_likes_received
+        data_type: Int
+        description: The total number of likes received during the stream.
+
+      - name: is_show_stream
+        data_type: Boolean
+        description: Indicates whether the stream was a show or a regular live stream.
+
+      - name: streamer_id
+        data_type: String
+        description: The unique identifier for the streamer.
+        tests:
+          - not_null
+
+      - name: streamer_register_time
+        data_type: Timestamp
+        description: The timestamp when the streamer registered in the app.
+
+      - name: streamer_register_country
+        data_type: String
+        description: The country where the streamer registered in the app.
+
+      - name: unique_viewer_count
+        data_type: Int
+        description: The total number of unique viewers during the stream.
+
+      - name: ios_viewer_count
+        data_type: Int
+        description: The number of viewers who accessed the stream from iOS devices.
+
+      - name: android_viewer_count
+        data_type: Int
+        description: The number of viewers who accessed the stream from Android devices.
+
+      - name: viewers_gt_5sec
+        data_type: Int
+        description: The number of viewers who stayed for more than 5 seconds.
+
+      - name: viewers_gt_2min
+        data_type: Int
+        description: The number of viewers who stayed for more than 2 minutes.
+
+      - name: viewers_gt_10min
+        data_type: Int
+        description: The number of viewers who stayed for more than 10 minutes.
+
+      - name: total_viewed_minutes
+        data_type: Int
+        description: The total number of minutes viewed across all viewers, rounded up to the nearest minute.
+
+      - name: avg_viewer_watch_time
+        data_type: Int
+        description: The average time each viewer spent watching the stream, in minutes.
+
+      - name: avg_stream_join_time
+        data_type: Int
+        description: The average time it took for viewers to join the stream, in minutes.
+
+      - name: total_comments
+        data_type: Int
+        description: The total number of comments made during the stream.
+
+      - name: follower_change
+        data_type: Int
+        description: The change in the number of followers during the stream. If negative, the value is converted to positive.
+
+      - name: total_gift_points_received
+        data_type: Int
+        description: The total number of gift points received by the streamer during the stream.

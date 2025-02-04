@@ -1,0 +1,23 @@
+user_stream:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: mcrfimk-hq34455
+
+      # User/password auth
+      user: Moaz123
+      password: Moaz_01003458943
+      role: dbt_role
+      database: dbt_db
+      warehouse: USER_STREAMS
+      schema: DBT_SCHEMA
+      threads: 5
+      client_session_keep_alive: False
+      query_tag: anything
+
+      connect_retries: 0 
+      connect_timeout: 10 # default: 10
+      retry_on_database_errors: False # default: false
+      retry_all: False  # default: false
+      reuse_connections: True # default: True if client_session_keep_alive is False, otherwise None

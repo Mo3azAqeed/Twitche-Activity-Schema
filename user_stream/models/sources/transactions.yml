@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: transactions
+    description: "This model contains detailed information about transactions, including transaction metadata, user information, and transaction details such as the type of transaction, the associated gift, points received, and the cancellation status."
+    columns:
+      - name: transaction_id
+        description: "A unique identifier for each transaction."
+        data_type: BigInt
+        tests:
+          - unique
+          - not_null
+      
+      - name: streamer_id
+        description: "The ID of the streamer who received the gift. This is a foreign key reference to the user table."
+        data_type: String
+        tests:
+          - not_null
+
+      - name: user_id
+        description: "The ID of the user who made the transaction. This is a foreign key reference to the user table."
+        data_type: String
+        tests:
+          - not_null
+
+      - name: transaction_timestamp
+        description: "The timestamp when the transaction occurred."
+        data_type: Timestamp
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: "The type of transaction"
+        data_type: String
+        tests:
+          - not_null
+        
+      - name: gift_id
+        description: "The unique identifier of the gift involved in the transaction."
+        data_type: String
+        tests:
+          - not_null
+        
+      - name: gift_points
+        description: "The number of points associated with the gift in the transaction."
+        data_type: INT
+        tests:
+          - not_null
+
+
+      - name: gift_timestamp
+        description: "The timestamp when the gift was received."
+        data_type: Timestamp
+        tests:
+          - not_null
+
+      
+      - name: is_canceled
+        description: "Indicates whether the transaction was canceled. True means canceled, false means not canceled."
+        data_type: Boolean
+
+      - name: transaction_points
+        description: "Points awarded for the transaction. This may differ from gift points if there are other factors involved."
+        data_type: INT

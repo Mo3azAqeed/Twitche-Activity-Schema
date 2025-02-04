@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: gift_received
+    description: "Tracks when a streamer receives a gift from a viewer."
+    columns:
+      - name: event_name
+        description: "The name of the event. In this case, it is 'gift_received'."
+        tests:
+          - not_null
+      - name: streamer_id
+        description: "The ID of the streamer receiving the gift."
+        tests:
+          - not_null
+      - name: viewer_id
+
+      
+      - name: properties
+        description: "A JSON object containing additional details about the stream."
+        tests:
+          - not_null
