@@ -23,11 +23,13 @@ This project follows **best practices in data modeling** to structure events and
 - Pulls raw data from **Google Sheets** (simulating event data)  
 - Loads it into **Snowflake** for processing
 - Stream Info & Transactions Table
+-   
+### Schema Setup Screenshots  
+#### Stream Info & Transactions Table  
+![Stream Info Table](https://github.com/Mo3azAqeed/Twitche-Activity-Schema/blob/f73d6520cccb81b0183d799e3ef199a43c93cdfa/Screenshot%20(19).png)  
+![Transactions Table](https://github.com/Mo3azAqeed/Twitche-Activity-Schema/blob/f73d6520cccb81b0183d799e3ef199a43c93cdfa/Screenshot%20(20).png)  
 
-
-
-
-
+---
 ### **2️⃣ Data Transformation (dbt 📊)**  
 - Converts raw event data into **structured, meaningful tables**  
 - Implements **an activity schema** suitable for **growth analytics**  
